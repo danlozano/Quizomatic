@@ -1,0 +1,75 @@
+<%= render appropiate_masthead %>
+
+  <div class="row">
+    <div class="span6">
+
+      <p>
+        <h2>Name:</h2>
+        <p class="lead"><%= @student.name %></p>
+      </p>
+      <p>
+        <h2>School:</h2>
+        <p class="lead"><%= @student.school.name %></p>
+      </p>
+      <p>
+        <h2>Classroom:</h2>
+        <p class="lead">
+        <% if !@student.classroom.nil? %>
+          <%= @student.classroom.name %>
+        <% end %>
+        </p>
+      </p>
+      <p>
+        <h2>Teacher:</h2>
+        <p class="lead">
+        <% if !@student.classroom.nil? %>
+          <%= @student.classroom.teacher.name %>
+        <% end %>
+        </p>
+      </p>
+      <p>
+        <h2>Parents:</h2>
+        <% @student.parents.each do |parent|  %>
+          <p class="lead"><%= parent.name %></p>
+        <% end %>
+      </p>
+
+      <% unless @role == 'parent' %>
+        <%= button_to 'Edit', edit_show_student_path(@student), :method => 'get', :class => 'btn btn-warning btn-large' %>
+      <% end %>
+      <%= button_to 'Back', show_students_path, :method => 'get', :class => 'btn btn-primary btn-large' %>
+
+    </div>
+    <div class="span6">
+      <h2>Grades</h2>
+      <table class="table table-bordered table-striped table-hover">
+        <tr>
+          <th>Title</th>
+          <th>Date</th>
+          <th>Attempt #</th>
+          <th>Grade</th>
+          <th></th>
+        </tr>
+        <% @student.quiz_results.each do |quiz_result| %>
+          <% if quiz_result.published == true %>
+            <tr>
+              <td><%= quiz_result.quiz.title %></td>
+              <td><%=quiz_result.date %></td>
+              <td><%=quiz_result.ocurrence %></td>
+              <td>
+                <% if quiz_result.grade > 69 %>
+                  <span class="label label-success"><%= quiz_result.grade %> % </span>
+                <% else %>
+                  <span class="label label-important"><%= quiz_result.grade %> % </span>
+                <% end %>
+              </td>
+              <td><%= link_to 'Show', quiz_result_path(quiz_result), :class => 'btn btn-info' %></td>
+            </tr>
+          <% end %>
+        <% end %>
+      </table>
+
+    </div>
+  </div>
+  
+</div>

@@ -1,0 +1,59 @@
+<div class="container">
+
+  <!-- Masthead
+  ================================================== -->
+  <header class="jumbotron subhead" id="overview">
+    <div class="row">
+      <div class="span7">
+        <h1><%= current_teacher.school.name  %></h1>
+        <h2>Teacher Access</h2>
+        <hr>
+        <h3><%= current_teacher.name  %></h3>
+        <% if !current_teacher.classroom.nil? %>
+          <h4><%= current_teacher.classroom.name  %> | <%= current_teacher.classroom.grade  %></h4>
+        <% end %>
+        
+      </div>
+      <div class="span5">
+        <div class="bsa well">
+          <%= image_tag "school.jpg", :class => 'img-rounded' %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <div class="alert alert-block">
+          Signed in as <strong> <%= current_teacher.email %></strong>. Not you?
+          <%= link_to "Sign out", destroy_teacher_session_path, :method => :delete %>
+        </div>
+      </div>
+    </div>
+
+    <% if flash.any? %>
+      <% flash.each do |name, msg| %>
+        <div class="row">
+            <div class="span12">
+              <div class="alert alert-info">
+                <a class="close" data-dismiss="alert">&times;</a>
+                  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+              </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+    <div class="subnav">
+      <ul class="nav nav-pills">
+        <li><%= link_to 'Home', teacher_dash_path %></li>
+        <li>
+          <%= link_to 'Quizzes', quizzes_path %>
+        </li>
+        <li>
+          <%= link_to 'Students', show_students_path  %>
+        </li>
+      </ul>
+    </div>
+
+  </header>
+

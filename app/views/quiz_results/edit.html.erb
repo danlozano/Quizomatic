@@ -1,0 +1,80 @@
+<%= render 'student_dashboard/student_masthead' %>
+
+  <div class="row">
+    <div class="span12">
+
+      <% if @quiz_result.errors.any? %>
+
+        <% @quiz_result.errors.full_messages.each do |msg| %>
+          <div class="row">
+            <div class="span12">
+              <div class="alert alert-error">
+                <a class="close" data-dismiss="alert">&times;</a>
+                <strong>Error: </strong><%= msg %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+      <% end %>
+
+      <%= form_for @quiz_result, :html => { :class => "form-horizontal well"} do |f| %>
+        <fieldset>
+
+          <legend><h2><%= @quiz_result.quiz.title %></h2></legend>
+          <hr>
+
+          <% @quiz_result.question_results.each do |question_result| %>
+            <%= f.fields_for :question_results, question_result do |builder| %>
+              
+              <legend><%= question_result.question.question %></legend>
+
+              <div class="control-group">
+                <%= builder.label :answer, question_result.question.answer_a, :class => 'control-label'  %>
+                <div class="controls">
+                  <%= builder.radio_button :answer, 'a' %>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <%= builder.label :answer, question_result.question.answer_b, :class => 'control-label'  %>
+                <div class="controls">
+                  <%= builder.radio_button :answer, 'b' %>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <%= builder.label :answer, question_result.question.answer_c, :class => 'control-label'  %>
+                <div class="controls">
+                  <%= builder.radio_button :answer, 'c' %>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <%= builder.label :answer, question_result.question.answer_d, :class => 'control-label'  %>
+                <div class="controls">
+                  <%= builder.radio_button :answer, 'd' %>
+                </div>
+              </div>
+
+            <% end %>
+          <% end %>
+
+          <div class="control-group">
+            <%= f.label :published, "Submit?" %>
+            <%= f.check_box :published %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.submit "Save Changes", :class => 'btn btn-warning btn-large' %>
+            <%= link_to 'Cancel', quiz_results_path, :class => 'btn btn-primary btn-large' %>
+          </div>
+
+        </fieldset>
+
+      <% end %>
+
+    </div>
+  </div>
+
+</div>

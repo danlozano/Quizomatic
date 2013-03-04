@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ocurrence: MyString
+  published: false
+  date: 2013-02-24 16:34:27
+  grade: 1
+  student_id: 1
+  quiz_id: 1
+
+two:
+  ocurrence: MyString
+  published: false
+  date: 2013-02-24 16:34:27
+  grade: 1
+  student_id: 1
+  quiz_id: 1

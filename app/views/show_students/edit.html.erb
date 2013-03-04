@@ -1,0 +1,85 @@
+<%= render appropiate_masthead %>
+
+<% if @student.errors.any? %>
+
+  <% @student.errors.full_messages.each do |msg| %>
+    <div class="row">
+      <div class="span12">
+        <div class="alert alert-error">
+          <a class="close" data-dismiss="alert">&times;</a>
+          <strong>Error: </strong><%= msg %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+<% end %>
+
+ <div class="row">
+    <div class="span12">
+
+      <%= form_for @student, :url => {:action =>'update'}, :html => { :class => "form-horizontal well"} do |f| %>
+        <fieldset>
+
+          <legend>Student</legend>
+          <div class="control-group">
+            <%= f.label :email, :class => 'control-label' %>
+            <div class="controls">
+              <%= f.email_field :email, :autofocus => true, :class => 'input-xlarge' %>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <%= f.label :name, :class => 'control-label' %>
+            <div class="controls">
+              <%= f.text_field :name, :class => 'input-xlarge' %>
+            </div>
+          </div>
+
+          <%= f.hidden_field :password, :value => "password" %>
+          <%= f.hidden_field :password_confirmation, :value => "password" %>
+
+          <div class="control-group">
+            <%= f.label :classroom_id, :class => 'control-label' %>
+             <% if @role == 'admin' %>
+              <div class="controls">
+               <%= f.select :classroom_id, Classroom.where(:school_id => current_admin.school.id).collect {|t| [(t.name + " " + t.grade), t.id]} %>
+              </div>
+            <% elsif @role == 'teacher' %>
+              <p class="lead"> <%= current_teacher.classroom.name %> </p>
+            <% end %>
+          </div>
+
+
+          <legend>Parents</legend>
+          <%= f.fields_for :parents do |builder| %>
+            <div class="control-group">
+              <%= builder.label :email, :class => 'control-label' %>
+              <div class="controls">
+                <%= builder.email_field :email, :class => 'input-xlarge' %>
+              </div>
+            </div>
+            <div class="control-group">
+              <%= builder.label :name, :class => 'control-label' %>
+              <div class="controls">
+               <%= builder.text_field :name, :class => 'input-xlarge' %>
+              </div>
+            </div>
+              <%= builder.hidden_field :password, :value => "password" %>
+              <%= builder.hidden_field :password_confirmation, :value => "password" %>
+              <%= builder.hidden_field :school_id, :value => current_user.school.id %>
+          <% end %>
+
+          <div class="form-actions">
+            <%= f.submit "Save Changes", :class => 'btn btn-warning btn-large' %>
+            <%= link_to 'Cancel', show_students_path, :class => 'btn btn-primary btn-large' %>
+          </div>
+        </fieldset>
+      <% end %>
+
+      
+
+    </div>
+  </div>
+
+</div>

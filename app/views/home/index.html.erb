@@ -1,0 +1,56 @@
+<div class="container">
+
+  <% if flash.any? %>
+      <% flash.each do |name, msg| %>
+        <div class="row">
+            <div class="span12">
+              <div class="alert alert-info">
+                <a class="close" data-dismiss="alert">&times;</a>
+                  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+              </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+
+  <!-- Main hero unit for a primary marketing message or call to action -->
+  <div class="hero-unit">
+    <div class="row">
+      
+      <div class="span8">
+        <h1>Quizomatic</h1>
+        <p class="lead">Quizomatic is a simple & fun web application that will help students, teachers, 
+        administrators and parents have a better interactive learning and teaching experience.</p>
+        <p>
+          <%= button_to "Create Account", new_admin_registration_path, :method => 'get', :class => 'btn btn-primary btn-large' %>
+        </p>
+      </div>
+      <div class="span2">
+        <h2>Log-In As:</h2>
+        <%= button_to "Administrator", new_admin_session_path, :method => 'get', :class => 'btn btn-primary btn-large' %> 
+        <%= button_to "Teacher", new_teacher_session_path, :method => 'get', :class => 'btn btn-warning btn-large' %> 
+        <%= button_to "Student", new_student_session_path, :method => 'get', :class => 'btn btn-info btn-large' %> 
+        <%= button_to "Parent", new_parent_session_path, :method => 'get', :class => 'btn btn-danger btn-large' %> 
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="span4">
+      <h2>Quizzes</h2>
+      <p>Students will be able to take quizzes created by their teacher. </p>
+    </div>
+    <div class="span4">
+      <h2>Administration</h2>
+      <p>Administrators can manage the school's account, while the teachers & parents track students progress.</p>
+    </div>
+    <div class="span4">
+      <h2>Gamification</h2>
+      <p>Students will be able to gain badges and score for good work and have them displayed on their profile. </p>
+   </div>
+  </div>
+
+</div> <!-- /container -->

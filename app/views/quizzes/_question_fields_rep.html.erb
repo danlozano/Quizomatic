@@ -1,0 +1,47 @@
+<fieldset>
+  <legend>Question</legend>
+
+  <%= builder.hidden_field :id, :value => '' %>
+
+  <div class="control-group">
+    <%= builder.label :question, :class => 'control-label'  %>
+    <div class="controls">
+      <%= builder.text_field :question, :class => 'input-xlarge' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= builder.label :answer_a, :class => 'control-label'  %>
+    <div class="controls">
+      <%= builder.text_field :answer_a, :class => 'input-xlarge' %>
+      <%= builder.radio_button :correct, 'a' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= builder.label :answer_b, :class => 'control-label'  %>
+    <div class="controls">
+      <%= builder.text_field :answer_b, :class => 'input-xlarge' %>
+      <%= builder.radio_button :correct, 'b' %>    
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= builder.label :answer_c, :class => 'control-label'  %>
+    <div class="controls">
+      <%= builder.text_field :answer_c, :class => 'input-xlarge' %>
+      <%= builder.radio_button :correct, 'c' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= builder.label :answer_d, :class => 'control-label'  %>
+    <div class="controls">
+      <%= builder.text_field :answer_d, :class => 'input-xlarge' %>
+      <%= builder.radio_button :correct, 'd' %>
+    </div>
+  </div>
+  <%= builder.hidden_field :_destroy %>
+  <%= link_to "Remove", '#', class: "btn btn-danger remove_fields" %>
+  <br /><br /><br />
+</fieldset>

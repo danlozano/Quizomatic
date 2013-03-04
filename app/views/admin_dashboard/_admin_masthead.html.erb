@@ -1,0 +1,53 @@
+<div class="container">
+
+  <!-- Masthead
+  ================================================== -->
+  <header class="jumbotron subhead" id="overview">
+    <div class="row">
+      <div class="span7">
+        <h1><%= current_admin.school.name  %></h1>
+        <h2>Administrator Access</h2>
+        <hr>
+        <h3><%= current_admin.name  %></h3>
+      </div>
+      <div class="span5">
+        <div class="bsa well">
+          <%= image_tag "school.jpg", :class => 'img-rounded' %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <div class="alert alert-block">
+          Signed in as  <strong><%= current_admin.email %>. </strong> Not you?
+          <%= link_to "Sign out", destroy_admin_session_path, :method => :delete %>
+        </div>
+      </div>
+    </div>
+
+    <% if flash.any? %>
+      <% flash.each do |name, msg| %>
+        <div class="row">
+            <div class="span12">
+              <div class="alert alert-info">
+                <a class="close" data-dismiss="alert">&times;</a>
+                  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+              </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+    <div class="subnav">
+      <ul class="nav nav-pills">
+        <li><%= link_to 'Home', admin_dash_path %></li>
+        <li><%= link_to 'Teachers ', show_teachers_path %></li>
+        <li><%= link_to 'Classrooms', classrooms_path %></li>
+        <li><%= link_to 'Students', show_students_path %></li>
+        <li><%= link_to 'Parents', show_parents_path %></li>
+      </ul>
+    </div>
+
+  </header>
+

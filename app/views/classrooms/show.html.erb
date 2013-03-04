@@ -1,0 +1,34 @@
+<%= render 'admin_dashboard/admin_masthead' %>
+  
+  <div class="row">
+    <div class="span12">
+      
+      <p>
+        <h2>Name:</h2>
+        <p class="lead"><%= @classroom.name %></p>
+      </p>
+
+      <p>
+        <h2>Grade:</h2>
+        <p class="lead"><%= @classroom.grade %></p>
+      </p>
+
+      <p>
+        <h2>School:</h2>
+        <p class="lead"><%= @classroom.school.name %></p>
+      </p>
+
+      <p>
+        <h2>Teacher:</h2>
+        <% if @classroom.teacher %>
+        <p class="lead"><%= @classroom.teacher.name  %></p>
+        <% end %>
+      </p>
+
+      <%= button_to 'Edit', edit_classroom_path(@classroom), :method => 'get', :class => 'btn btn-warning btn-large' %>
+      <%= button_to 'Back', classrooms_path, :method => 'get', :class => 'btn btn-primary btn-large' %>
+      
+    </div>
+  </div>
+
+</div>

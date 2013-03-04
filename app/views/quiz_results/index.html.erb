@@ -1,0 +1,92 @@
+<%= render 'student_dashboard/student_masthead' %>
+
+  <div class="row">
+    <div class="span12">
+
+      <h1>Available Quizzes</h1>
+
+      <table class="table table-bordered table-striped table-hover">
+        <tr>
+          <th>Title</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Teacher</th>
+          <th>Max. Attempts</th>
+          <th></th>
+        </tr>
+
+      <% @quizzes.each do |quiz| %>
+        <tr>
+          <td><%= quiz.title %></td>
+          <td><%= quiz.stdate %></td>
+          <td><%= quiz.enddate %></td>
+          <td><%= quiz.teacher.name %></td>
+          <td><%= quiz.ocurrences %></td>
+          <td><%= link_to 'Take Quiz', new_quiz_result_path(:quiz_id => quiz.id), :class => 'btn btn-success' %></td>
+        </tr>
+      <% end %>
+      </table>
+
+      <br /><br />
+
+      <h1>Quiz Results</h1>
+
+      <table class="table table-bordered table-striped table-hover">
+        <tr>
+          <th>Title</th>
+          <th>Date</th>
+          <th>Attempt #</th>
+          <th>Submitted</th>
+          <th>Grade</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+
+      <% @quiz_results.each do |quiz_result| %>
+        <tr>
+          <td><%= quiz_result.quiz.title %></td>
+          <td><%= quiz_result.date %></td>
+          <td><%= quiz_result.ocurrence %> of <%= quiz_result.quiz.ocurrences %></td>
+          <td><%= quiz_result.published %></td>
+          <td>
+            <% if !quiz_result.grade.nil? %>
+              <% if quiz_result.grade > 69 %>
+                <span class="label label-success"><%= quiz_result.grade %> %</span>
+              <% else %>
+                <span class="label label-important"><%= quiz_result.grade %> %</span>
+              <% end %>
+            <% end %>
+          </td>
+          <td><%= link_to 'Show', quiz_result, :class => 'btn btn-info' %></td>
+          <td>
+            <% if quiz_result.published %>
+              <a href="#alertModal" role="button" class="btn btn-warning disabled alert-button" data-toggle="modal" data-body="You cant edit a submitted quiz! Ask your teacher if you want another chance to take the quiz.">Edit</a>
+            <% else %>
+              <%= link_to 'Edit', edit_quiz_result_path(quiz_result), :class => 'btn btn-warning' %>              
+            <% end %>
+          </td>
+          <td><%= link_to 'Destroy', quiz_result, :method => :delete, :class => 'btn btn-danger' %></td>
+        </tr>
+      <% end %>
+      </table>
+
+      <br />
+
+    </div>
+  </div>
+
+  <!-- Alert Modal -->
+  <div id="alertModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Alert</h3>
+    </div>
+    <div class="modal-body" id="alert-body"></div>
+    <div class="modal-footer">
+      <button class="btn btn-warning" data-dismiss="modal" aria-hidden="true">Ok</button>
+    </div>
+  </div>
+
+</div>
+

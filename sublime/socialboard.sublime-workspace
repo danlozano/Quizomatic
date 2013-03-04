@@ -1,0 +1,629 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"curre",
+				"current_parent"
+			],
+			[
+				"current",
+				"current_teacher"
+			],
+			[
+				"app",
+				"appropiate_masthead"
+			],
+			[
+				"ocurre",
+				"ocurrences"
+			],
+			[
+				"quiz",
+				"quiz_result"
+			],
+			[
+				"st",
+				"stdate"
+			],
+			[
+				"end",
+				"enddate"
+			],
+			[
+				"quiz_",
+				"quiz_result"
+			],
+			[
+				"if",
+				"if	if … end"
+			],
+			[
+				"ques",
+				"question_results"
+			],
+			[
+				"correct",
+				"correctCount"
+			],
+			[
+				"class",
+				"classroom"
+			],
+			[
+				"name",
+				"name"
+			],
+			[
+				"parent",
+				"parent"
+			],
+			[
+				"paddin",
+				"padding-top"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"lists",
+				"list-style-type"
+			],
+			[
+				"colo",
+				"colorBlue"
+			],
+			[
+				"def",
+				"def	Function"
+			],
+			[
+				"consume",
+				"consumerResultsTitle"
+			],
+			[
+				"spi",
+				"spiritualResultsTitle"
+			],
+			[
+				"remain",
+				"remainingApiHits"
+			],
+			[
+				"consum",
+				"consumerResultsDiv"
+			],
+			[
+				"psy",
+				"psychopathyResultsDiv"
+			],
+			[
+				"emotionalresu",
+				"emotionalResultsDiv"
+			],
+			[
+				"con",
+				"consumerResultsDiv"
+			],
+			[
+				"spir",
+				"spiritualResultsDiv"
+			],
+			[
+				"pscho",
+				"psychopathyResultsDiv"
+			],
+			[
+				"emotionalResul",
+				"emotionalResultsDiv"
+			],
+			[
+				"ca",
+				"causeEffect"
+			],
+			[
+				"emotion",
+				"emotionalResultsDiv"
+			],
+			[
+				"negat",
+				"negativeControlData"
+			],
+			[
+				"posit",
+				"positiveThoughtsData"
+			],
+			[
+				"negative",
+				"negativePassiveData"
+			],
+			[
+				"graph",
+				"graphConsumerResults"
+			],
+			[
+				"json",
+				"jsonResponse"
+			],
+			[
+				"re",
+				"results"
+			],
+			[
+				"final",
+				"finalPsychopathyScore"
+			],
+			[
+				"twe",
+				"tweetCount"
+			],
+			[
+				"sorted",
+				"sortedKeyWords"
+			],
+			[
+				"keyWord",
+				"keyWordCount"
+			],
+			[
+				"emo",
+				"emotionResults"
+			],
+			[
+				"emot",
+				"emotionAnalyzer"
+			],
+			[
+				"Tweet",
+				"TweetAnalyzer"
+			],
+			[
+				"categ",
+				"category"
+			],
+			[
+				"cate",
+				"categories"
+			],
+			[
+				"get",
+				"getCategories"
+			],
+			[
+				"tw",
+				"tweetList"
+			],
+			[
+				"ac",
+				"access_secret"
+			],
+			[
+				"acc",
+				"access_key"
+			],
+			[
+				"globa",
+				"globalVar"
+			],
+			[
+				"twee",
+				"tweetList"
+			],
+			[
+				"tweet",
+				"tweetCount"
+			],
+			[
+				"consumer",
+				"consumer_secret"
+			],
+			[
+				"user_",
+				"user_secret"
+			],
+			[
+				"child",
+				"childTwo"
+			],
+			[
+				"par",
+				"parseTxt"
+			],
+			[
+				"pa",
+				"parseTxt"
+			],
+			[
+				"addre",
+				"addressBook"
+			],
+			[
+				"add",
+				"addressBook"
+			],
+			[
+				"te",
+				"testEntryTwo"
+			],
+			[
+				"entr",
+				"entryList"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/danlozano/Dropbox/socialboard/app/views/quiz_results/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 3048,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 267.0,
+		"selected_items":
+		[
+			[
+				"brack",
+				"Bracket Highlighter: Match Brackets"
+			],
+			[
+				"",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"set syntax java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"package insta",
+				"Package Control: Install Package"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 602.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/danlozano/Desktop/Matchbox/server.py",
+		"/Users/danlozano/Dropbox/socialboard/app/views/quiz_results/show.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/config/environments/development.rb",
+		"/Users/danlozano/Dropbox/socialboard/config/routes.rb",
+		"/Users/danlozano/Dropbox/socialboard/config/environment.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/show_students/index.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/show_students/edit.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/show_students/new.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/show_teachers/index.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/show_teachers/show.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/show_students/show.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/controllers/quiz_results_controller.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/quiz_results/index.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/controllers/show_students_controller.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/controllers/quizzes_controller.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/quizzes/index.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/models/quiz.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/models/admin.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/controllers/home_controller.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/models/quiz_result.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/controllers/application_controller.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/quizzes/republish.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/quizzes/_form.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/quizzes/show.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/controllers/schools_controller.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/schools/_form.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130225224453_add_timezone_to_school.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/devise/registrations/new.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/models/school.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/quizzes/edit.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/quizzes/new.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/teacher_dashboard/_teacher_masthead.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/quiz_results/new.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/quiz_results/edit.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/quiz_results/_form.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/assets/stylesheets/bootswatch.css",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130225192146_fix_quiz_results_string.rb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130224223427_create_quiz_results.rb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130225175524_add_column_to_quiz.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/models/student.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/models/classroom.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/helpers/quiz_results_helper.rb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130225171846_add_final_fix_to_quiz_grade.rb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130225005501_add_final_fix.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/student_dashboard/_student_masthead.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/models/question_result.rb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130225005042_add_fix_to_quiz_results.rb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130225003331_add_correction_to_quiz_results.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/models/question.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/assets/javascripts/quizzes.js",
+		"/Users/danlozano/Dropbox/socialboard/app/views/quizzes/_question_fields.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130224225839_add_columns_to_question_result.rb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130205174415_remove_teacher_from_student.rb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130205175109_remove_table_students_parents.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/student_dashboard/index.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/controllers/admin_dashboard_controller.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/controllers/show_parents_controller.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/controllers/classrooms_controller.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/controllers/show_teachers_controller.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/admin_dashboard/index.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/parent_dashboard/_parent_masthead.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/admin_dashboard/_admin_masthead.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/teacher_dashboard/index.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/models/teacher.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/classrooms/index.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/show_parents/edit.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/classrooms/_form.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/show_teachers/new.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/show_teachers/edit.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/devise/sessions/new.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/home/index.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/show_parents/new.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/assets/stylesheets/quizzes.css.scss",
+		"/Users/danlozano/Dropbox/socialboard/app/assets/stylesheets/application.css",
+		"/Users/danlozano/Dropbox/socialboard/app/helpers/application_helper.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/show_parents/index.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/assets/stylesheets/admin_dashboard.css.scss",
+		"/Users/danlozano/Dropbox/socialboard/app/assets/stylesheets/show_parents.css.scss",
+		"/Users/danlozano/Dropbox/socialboard/app/assets/stylesheets/bootstrap.css",
+		"/Users/danlozano/Dropbox/socialboard/app/views/quizzes/_question_fields_rep.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/layouts/application.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/assets/javascripts/application.js",
+		"/Users/danlozano/Dropbox/socialboard/app/assets/javascripts/admin_dashboard.js.coffee",
+		"/Users/danlozano/Dropbox/socialboard/app/assets/javascripts/app.js",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130221155604_add_column_to_quizzes.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/assets/javascripts/quizzes.js.coffee",
+		"/Users/danlozano/Dropbox/socialboard/app/views/classrooms/edit.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/classrooms/new.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/classrooms/show.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130220032232_add_column_to_question.rb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130205171020_add_colums_to_parent.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/assets/stylesheets/schools.css.scss",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130220030348_create_questions.rb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130220025915_create_quizzes.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/parent_dashboard/index.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/controllers/admin_controller.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/parent_dashboard/parent_masthead.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/teacher_dashboard/teacher_masthead.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/devise/passwords/edit.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/devise/passwords/new.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/devise/confirmations/new.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/show_parents/show.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/devise/shared/_links.erb",
+		"/Users/danlozano/.Trash/admins/registrations/new.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/parents/sessions/new.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/teachers/sessions/new.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/students/sessions/new.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/admins/sessions/new.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/home/login.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/config/environments/production.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/assets/stylesheets/bootstrap-responsive.css",
+		"/Users/danlozano/Dropbox/socialboard/app/views/classrooms/_admin_masthead.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/admins/registrations/new.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/show_students/_admin_masthead.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/show_parents/_masthead.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/admins/registrations/edit.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/controllers/student_dashboard_controller.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/controllers/teacher_dashboard_controller.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/controllers/parent_dashboard_controller.rb",
+		"/Users/danlozano/Library/Caches/Cleanup At Startup/Transmit/3FEA2FB1-1586-4060-9B93-4DCA3CA82FA3/journal.html",
+		"/Users/danlozano/Dropbox/socialboard/app/views/show_students/_form.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/app/views/students/registrations/edit.html.erb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130205175207_add_new_students_parents_table.rb",
+		"/Users/danlozano/Dropbox/socialboard/app/models/parent.rb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130130035927_create_students_parents.rb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130130025412_devise_create_students.rb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130205174559_add_school_to_student.rb",
+		"/Users/danlozano/Dropbox/socialboard/db/migrate/20130205174157_add_column_to_student.rb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"b",
+			":</>",
+			"b",
+			">\n",
+			"@old_quiz",
+			"b",
+			"student",
+			"current",
+			"b",
+			"link_to",
+			"b",
+			"link_to",
+			"b",
+			"teacher",
+			"@classroom",
+			"h1",
+			"h3",
+			"b",
+			"hero",
+			"admin",
+			"teacher",
+			"student",
+			"teacher",
+			"indentation",
+			"jumbotron",
+			"jumbo",
+			"jumbotron",
+			"Servicios",
+			"align",
+			"loading",
+			"ardillas",
+			"file"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/danlozano/Dropbox/socialboard/app/views/quiz_results/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 3048,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								555,
+								555
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 236.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 280.0,
+	"status_bar_visible": true
+}

@@ -1,0 +1,16 @@
+<div class="container">
+
+  <div class="row">
+    <div class="span6 offset3">
+
+      <h1>Choose log-in type: </h1>
+      
+      <%= button_to "Administrator", new_admin_session_path, :method => 'get', :class => 'btn btn-primary btn-large' %> <br>
+      <%= button_to "Teacher", new_teacher_session_path, :method => 'get', :class => 'btn btn-warning btn-large' %> <br>
+      <%= button_to "Student", new_student_session_path, :method => 'get', :class => 'btn btn-info btn-large' %> <br>
+      <%= button_to "Parent", new_parent_session_path, :method => 'get', :class => 'btn btn-danger btn-large' %> 
+
+    </div>
+  </div>
+  
+</div>

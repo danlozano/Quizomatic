@@ -1,0 +1,28 @@
+<center>
+<%= current_admin %><br />
+<%= current_admin.email %><br />
+<%= current_admin.name %><br />
+<%= current_admin.school_id %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @school.name %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @school.location %>
+</p>
+
+<p>
+  <b>Picture:</b>
+  <%= @school.picture %>
+</p>
+
+
+<%= link_to 'Edit', edit_school_path(@school) %> |
+<%= link_to 'Back', schools_path %>
+
+</center>

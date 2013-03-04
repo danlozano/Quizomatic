@@ -1,0 +1,75 @@
+<%= render 'teacher_dashboard/teacher_masthead' %>
+
+  <div class="row">
+    <div class="span12">
+
+      <p>
+        <h2>Title:</h2>
+        <p class="lead"><%= @quiz.title %></p>
+      </p>
+
+      <p>
+        <h2>Start Date:</h2>
+        <p class="lead"><%= @quiz.stdate %></p>
+      </p>
+
+      <p>
+        <h2>End Date:</h2>
+        <p class="lead"><%= @quiz.enddate %></p>
+      </p>
+
+      <p>
+        <h2>Published:</h2>
+        <p class="lead"><%= @quiz.published %></p>
+      </p>
+
+      <p>
+        <h2>Max. Attempts:</h2>
+        <p class="lead"><%= @quiz.ocurrences %></p>
+      </p>
+
+      <p>
+        <h2>Teacher:</h2>
+        <p class="lead"><%= @quiz.teacher.name %></p>
+      </p>
+
+      <p>
+        <h2>Questions:</h2>
+        <% if !@quiz.questions.blank? %>
+          <% @quiz.questions.each do |question| %>
+            <p class="lead">
+              Question: <%= question.question %><br />
+              Answer A: <%= question.answer_a %><br />
+              Answer B: <%= question.answer_b %><br />
+              Answer C: <%= question.answer_c %><br />
+              Answer D: <%= question.answer_d %><br />
+              Correct: <%= question.correct %>
+            </p>
+          <% end %>
+        <% end %>
+      </p>
+
+      <% if @quiz.published %>
+        <a href="#alertModal" role="button" class="btn btn-warning btn-large disabled alert-button" data-toggle="modal" data-body="You cant edit a published quiz. Try re-publishing it. Old quiz will be lost!">Edit</a><br /><br />
+      <% else %>
+        <%= link_to 'Edit', edit_quiz_path(@quiz), :class => 'btn btn-warning btn-large' %><br /><br />
+      <% end %>
+
+      <%= button_to 'Back', quizzes_path, :method => 'get', :class => 'btn btn-primary btn-large' %>
+
+      <!-- Alert Modal -->
+      <div id="alertModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Alert</h3>
+        </div>
+        <div class="modal-body" id="alert-body"></div>
+        <div class="modal-footer">
+          <button class="btn btn-warning" data-dismiss="modal" aria-hidden="true">Ok</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

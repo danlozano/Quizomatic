@@ -1,0 +1,91 @@
+<%= render 'teacher_dashboard/teacher_masthead' %>
+
+  <div class="row">
+    <div class="span12">
+
+      <h1>Quizzes</h1>
+      <table class="table table-bordered table-striped table-hover">
+        <tr>
+          <th>Title</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Published</th>
+          <th>Teacher</th>
+          <th>Max. Attempts</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+
+      <% @quizzes.each do |quiz| %>
+        <tr>
+          <td><%= quiz.title %></td>
+          <td><%= quiz.stdate %></td>
+          <td><%= quiz.enddate %></td>
+          <td><%= quiz.published %></td>
+          <td><%= quiz.teacher.name %></td>
+          <td><%= quiz.ocurrences %> -> <%= link_to '+1', increment_quiz_path(quiz), :class => 'btn btn-success' %></td>
+
+          <td><%= button_to 'Show', quiz, :method => 'get', :class => 'btn btn-info' %></td>
+          
+          <% if !quiz.published %>
+            <td>
+              <%= button_to 'Edit', edit_quiz_path(quiz), :method => 'get', :class => 'btn btn-warning' %>
+            </td>
+            <td>
+              <a href="#destroyModal" role="button" class="btn btn-danger destroy-button-one" data-toggle="modal" data-resource="quizzes" data-id=<%= quiz.id %> >Destroy</a>
+            </td>
+            <td>
+              <a href="#alertModal" role="button" class="btn btn-inverse disabled alert-button" data-toggle="modal" data-body="You can only re-publish a quiz if it has already been published!">Republish</a>
+            </td>
+          <% else %>
+            <td>
+              <a href="#alertModal" role="button" class="btn btn-warning disabled alert-button" data-toggle="modal" data-body="You can't edit a published quiz. Try re-publishing it. Old quiz will be lost!">Edit</a>
+            </td>
+            <td>
+              <a href="#destroyModal" role="button" class="btn btn-danger destroy-button-one" data-toggle="modal" data-resource="quizzes" data-id=<%= quiz.id %> >Destroy</a>
+            </td>
+            <td>
+              <%= button_to 'Republish', republish_quiz_path(quiz), :method => 'get', :class => 'btn btn-inverse' %>
+            </td>
+          <% end %>
+        
+        </tr>
+      <% end %>
+      </table>
+
+      <br />
+      <%= button_to 'New Quiz', new_quiz_path, :method => 'get', :class => 'btn btn-primary btn-large' %>
+
+      <!-- Destroy Confirm Modal -->
+      <div id="destroyModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Destroy?</h3>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to destroy this quiz?
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-warning" data-dismiss="modal" aria-hidden="true">Cancel</button>
+          <a href="" class="btn btn-danger destroy-button-two" data-method="delete">Destroy</a>
+        </div>
+      </div>
+
+      <!-- Alert Modal -->
+      <div id="alertModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Alert</h3>
+        </div>
+        <div class="modal-body" id="alert-body"></div>
+        <div class="modal-footer">
+          <button class="btn btn-warning" data-dismiss="modal" aria-hidden="true">Ok</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

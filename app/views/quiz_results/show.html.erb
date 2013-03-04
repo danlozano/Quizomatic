@@ -1,0 +1,110 @@
+<%= render appropiate_masthead %>
+
+  <div class="row">
+    <div class="span12">
+
+      <p>
+        <h2>Quiz Title:</h2>
+        <p class="lead"><%= @quiz_result.quiz.title %></p>
+      </p>
+
+      <p>
+        <h2>Attempt #:</h2>
+        <p class="lead"><%= @quiz_result.ocurrence %> of <%= @quiz_result.quiz.ocurrences %></p>
+      </p>
+
+      <p>
+        <h2>Submitted:</h2>
+        <p class="lead"><%= @quiz_result.published %></p>
+      </p>
+
+      <p>
+        <h2>Date:</h2>
+        <p class="lead"><%= @quiz_result.date %></p>
+      </p>
+
+      <p>
+        <h2>Student:</h2>
+        <p class="lead"><%= @quiz_result.student.name %></p>
+      </p>
+
+      <% if @quiz_result.published  %>
+
+        <% if @quiz_result.grade == 100 || @quiz_result.ocurrence == @quiz_result.quiz.ocurrences %>
+          <p>
+            <h2>Questions:</h2>
+              <% @quiz_result.question_results.each do |question_result| %>
+                <p class="lead">
+                  Question: <%= question_result.question.question %><br />
+                  Your Answer: 
+                  <% if !question_result.answer.nil? %>
+                    <%= question_result.answer %> | <%= appropiate_answer(question_result, question_result.answer) %>
+                  <% end %>
+                  <br />
+                  Correct Answer: <%= question_result.question.correct %> | <%= appropiate_answer(question_result, question_result.question.correct) %><br />
+                  <% if question_result.correct? %>
+                    <span class="label label-success">Correct</span>
+                  <% else %>
+                    <span class="label label-important">Wrong</span>
+                  <% end %>
+                </p>
+              <% end %>
+        <% else %>
+          <p>
+            <h2>Questions:</h2>
+              <% @quiz_result.question_results.each do |question_result| %>
+                <p class="lead">
+                  Question: <%= question_result.question.question %><br />
+                  Your Answer: <%= question_result.answer %> | <%= appropiate_answer(question_result, question_result.answer) %><br />
+                </p>
+              <% end %>
+          </p>
+        <% end %>
+            <p>
+              <h2>Grade:</h2>
+              <p class="lead"><%= @quiz_result.grade %> %</p>
+            </p>
+          </p>
+
+      <% else %>
+
+        <p>
+          <h2>Questions:</h2>
+            <% @quiz_result.question_results.each do |question_result| %>
+              <p class="lead">
+                Question: <%= question_result.question.question %><br />
+                Your Answer: <%= question_result.answer %><br />
+              </p>
+            <% end %>
+        </p>
+
+      <% end %>
+
+      <% if @role == 'student' %>
+        <% if @quiz_result.published %>
+          <a href="#alertModal" role="button" class="btn btn-warning btn-large disabled alert-button" data-toggle="modal" data-body="You cant edit a submitted quiz! Ask your teacher if you want another chance to take the quiz.">Edit</a><br /><br />
+        <% else %>
+          <%= link_to 'Edit', edit_quiz_result_path(@quiz_result), :class => 'btn btn-large btn-warning' %><br /><br />
+        <% end %>
+        <%= link_to 'Back', quiz_results_path, :class => 'btn btn-primary btn-large' %>
+        
+      <% else %>
+        <%= button_to 'Back', show_student_path(@quiz_result.student), :method => 'get', :class => 'btn btn-primary btn-large' %>
+      <% end %>
+
+    </div>
+  </div>
+
+  <!-- Alert Modal -->
+  <div id="alertModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Alert</h3>
+    </div>
+    <div class="modal-body" id="alert-body"></div>
+    <div class="modal-footer">
+      <button class="btn btn-warning" data-dismiss="modal" aria-hidden="true">Ok</button>
+    </div>
+  </div>
+
+</div>

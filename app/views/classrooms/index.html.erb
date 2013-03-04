@@ -1,0 +1,57 @@
+<%= render 'admin_dashboard/admin_masthead' %>
+
+  <div class="row">
+    <div class="span12">
+
+        <h1>Classrooms</h1>
+        <table class="table table-bordered table-striped table-hover">
+          <tr>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Teacher</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+
+        <% @classrooms.each do |classroom| %>
+          <tr>
+            <td><%= classroom.name %></td>
+            <td><%= classroom.grade %></td>
+            <td>
+              <% if classroom.teacher %>
+                  <%= classroom.teacher.name  %>
+              <% end %>
+            </td>
+            <td><%= button_to 'Show', classroom, :method => 'get', :class => 'btn btn-info' %></td>
+            <td><%= button_to 'Edit', edit_classroom_path(classroom), :method => 'get', :class => 'btn btn-warning' %></td>
+            <td><a href="#destroyModal" role="button" class="btn btn-danger destroy-button-one" data-toggle="modal" data-resource="classrooms" data-id=<%= classroom.id %> >Destroy</a></td>
+          </tr>
+        <% end %>
+        </table>
+
+        <br />
+
+        <%= button_to 'New Classroom', new_classroom_path, :method => 'get', :class => 'btn btn-primary btn-large' %>
+
+        <!-- Destroy Confirm Modal -->
+        <div id="destroyModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Destroy?</h3>
+          </div>
+          <div class="modal-body">
+            Are you sure you want to destroy this classroom?
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-warning" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            <a href="" class="btn btn-danger destroy-button-two" data-method="delete">Destroy</a>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+</div>
+
+

@@ -1,0 +1,38 @@
+<%= render 'admin_dashboard/admin_masthead' %>
+
+  <div class="row">
+    <div class="span12">
+
+      <h1>Parents</h1>
+
+      <table class="table table-bordered table-striped table-hover">
+        <tr>
+          <th>Name</th>
+          <th>E-Mail</th>
+          <th>Children</th>
+          <th></th>
+          <th></th>
+        </tr>
+
+      <% @parents.each do |parent| %>
+        <tr>
+          <td><%= parent.name %></td>
+          <td><%= parent.email %></td>
+          <td>
+            <% parent.students.each do |student|  %>
+              <%= student.name %>
+            <% end %>
+          </td>
+          <td><%= button_to 'Show', show_parent_path(parent), :method => 'get', :class => 'btn btn-info' %></td>
+          <td><%= button_to 'Edit', edit_show_parent_path(parent), :method => 'get', :class => 'btn btn-warning' %></td>
+        </tr>
+      <% end %>
+      </table>
+
+      <br />
+
+    </div>
+  </div>
+
+</div> 
+
